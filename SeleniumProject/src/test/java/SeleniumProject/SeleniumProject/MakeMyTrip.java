@@ -10,6 +10,7 @@ public class MakeMyTrip {
 
 	public void makeMyTrip(String webSiteDomain, WebDriver driver) throws InterruptedException {
 
+		try {
 		Actions action = new Actions(driver);
 		driver.navigate().to(webSiteDomain);
 		driver.manage().window().maximize();
@@ -39,7 +40,10 @@ public class MakeMyTrip {
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//*[@class='primaryBtn font24 latoBold widgetSearchBtn ' and text()='Search']"))
 				.click();
-
+		}catch(Exception exception)
+		{
+			System.out.println(exception);
+		}
 	}
 
 }
