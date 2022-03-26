@@ -26,7 +26,6 @@ public class MainClass {
 	public void test1() throws InterruptedException  {	
 		
 		mmt.makeMyTrip(webSiteDomain, driver);
-		System.out.println();
 	
 	}
 	@BeforeMethod
